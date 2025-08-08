@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Export Popup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="center-button">
+    <button id="exportBtn" class="export-button">EXPORT CODE</button>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h2>Code Export</h2>
+        <span class="close-button" id="closeBtn">&times;</span>
+      </div>
+      <p class="popup-subtitle">Manage how you download your website’s code.</p>
+
+      <div class="tabs">
+        <button class="tab active" id="htmlTab">HTML &amp; CSS</button>
+        <button class="tab" id="nextTab">Next JS</button>
+      </div>
+
+      <div id="htmlContent" class="tab-content">
+        <div class="export-header">
+            <p class="export-type">
+              <img src="html-icon.png" alt="HTML Icon" style="height:20px;vertical-align:middle;margin-right:8px;">
+              Export as HTML &amp; CSS
+            </p>
+          <span class="zipped-tag">Zipped</span>
+        </div>
+        <label class="checkbox-container">
+          <input type="checkbox" />
+          Include assets (images, styles, fonts, etc.)
+        </label>
+        <label class="checkbox-container">
+          <input type="checkbox" />
+          Include custom code
+        </label>
+        <button class="download-button">Download HTML CSS Project</button>
+      </div>
+
+      <div id="nextContent" class="tab-content hidden">
+        <div class="export-header">
+            <p class="export-type">
+              <img src="nextjs-icon.png" alt="NextJS Icon" style="height:20px;vertical-align:middle;margin-right:8px;">
+              Export as Next JS Project
+            </p>
+          <span class="zipped-tag">Zipped</span>
+        </div>
+        <label class="checkbox-container">
+          <input type="checkbox" />
+          Use <code>`app`</code> directory (NextJS v13+)
+        </label>
+        <label class="checkbox-container">
+          <input type="checkbox" />
+          Include assets locally (images, styles, fonts, etc.)
+        </label>
+        <label class="checkbox-container">
+          <input type="checkbox" />
+          Include custom code
+        </label>
+        <button class="download-button">Download Next JS Project</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
